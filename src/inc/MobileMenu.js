@@ -90,7 +90,6 @@ const MobileMenu = () => {
                               <li><Link to={process.env.PUBLIC_URL + "/testimonial"}>Testimonial</Link></li>
                               <li><Link to={process.env.PUBLIC_URL + "/price"}>Pricing Table</Link></li>
                               <li><Link to={process.env.PUBLIC_URL + "/login"}>Log In</Link></li>
-                              <li><Link to={process.env.PUBLIC_URL + "/register"}>Register</Link></li>
                               <li><Link to={process.env.PUBLIC_URL + "/faq"}>Faq</Link></li>
                               <li><Link to={process.env.PUBLIC_URL + "/error"}>404 Error</Link></li>
                               <li><Link to={process.env.PUBLIC_URL + "/contact"}>Contact</Link></li>
