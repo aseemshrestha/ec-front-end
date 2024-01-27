@@ -1,0 +1,78 @@
+{
+   "secTitle": "Our Team Members",
+   "secHeading": "Vitae sed praesentium tempora ex fugiat animin kalem reiciendis sapuro saepe.",
+   "dataList": [
+      {
+         "id": "1",
+         "imgUrl": "/assets/images/team-1.jpg",
+         "name": "Shelly Kulumn",
+         "title": "Engineer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      },
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/team-2.jpg",
+         "name": "David Wisky",
+         "title": "Writer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      },
+      {
+         "id": "3",
+         "imgUrl": "/assets/images/team-3.jpg",
+         "name": "Alisha Polish",
+         "title": "Photographer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      },
+      {
+         "id": "4",
+         "imgUrl": "/assets/images/team-4.jpg",
+         "name": "John Davidson",
+         "title": "Designer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      },
+      {
+         "id": "5",
+         "imgUrl": "/assets/images/team-5.jpg",
+         "name": "Kelly Klarkson",
+         "title": "Computer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      },
+      {
+         "id": "4",
+         "imgUrl": "/assets/images/team-6.jpg",
+         "name": "John Davidson",
+         "title": "Designer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      },
+      {
+         "id": "1",
+         "imgUrl": "/assets/images/team-7.jpg",
+         "name": "Shelly Kulumn",
+         "title": "Engineer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      },
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/team-8.jpg",
+         "name": "David Wisky",
+         "title": "Writer",
+         "facebook": "/",
+         "twitter": "/",
+         "linkedin": "/"
+      }
+   ]
+}

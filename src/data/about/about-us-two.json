@@ -1,0 +1,15 @@
+{
+   "secTitle": "About Us",
+   "secHeading": "Vitae sed praesen tempora exe fugiat animin kalem.",
+   "secDesc": "Elaceat facilis voluptatibus suscipit nam. Vitae sed accusai voluptatem dolorem maiores perferendis quos obcaecati, enim nesciunt magni, nostrum laudantium.",
+   "dataList": [
+      {
+         "id": "1",
+         "imgUrl": "/assets/images/about-slider-1.jpg"
+      },
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/about-slider-2.jpg"
+      }
+   ]
+}

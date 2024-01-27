@@ -1,0 +1,30 @@
+[
+   {
+      "id": "1",
+      "imgUrl": "/assets/images/project-1.jpg",
+      "category": "business",
+      "proTitle": "Filter Project 1",
+      "proLink": "/"
+   },
+   {
+      "id": "2",
+      "imgUrl": "/assets/images/project-4.jpg",
+      "category": "consulting",
+      "proTitle": "Filter Project 2",
+      "proLink": "/"
+   },
+   {
+      "id": "3",
+      "imgUrl": "/assets/images/project-5.jpg",
+      "category": "corporate",
+      "proTitle": "Filter Project 3",
+      "proLink": "/"
+   },
+   {
+      "id": "4",
+      "imgUrl": "/assets/images/project-8.jpg",
+      "category": "research",
+      "proTitle": "Filter Project 4",
+      "proLink": "/"
+   }
+]

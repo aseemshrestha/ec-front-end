@@ -1,0 +1,22 @@
+[
+   {
+      "id": "1",
+      "sliderBackground": "/assets/images/hero-bg.jpg",
+      "sliderImage": "/assets/images/hero-cont-1.png",
+      "title": "Welcome to the Afily Business Agency",
+      "bigTitle": "A true business agency for your company.",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit inusy repella eligendi saepe magni eume vitae dolor totam.",
+      "btnLink1": "/",
+      "btnLink2": "/"
+   },
+   {
+      "id": "2",
+      "sliderBackground": "/assets/images/hero-bg.jpg",
+      "sliderImage": "/assets/images/hero-cont-2.png",
+      "title": "Welcome to the Afily Business Agency",
+      "bigTitle": "A true business agency for your company.",
+      "desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit inusy repella eligendi saepe magni eume vitae dolor totam.",
+      "btnLink1": "/",
+      "btnLink2": "/"
+   }   
+]

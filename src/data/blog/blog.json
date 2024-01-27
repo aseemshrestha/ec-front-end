@@ -1,0 +1,81 @@
+{
+   "blogLarge": {
+      "id": "1",
+      "imgUrl": "/assets/images/blog-large-img.jpg",
+      "date": "July 21, 2024",
+      "title": "Unde officia omnis pariatur, unicomo voluptate deserunt obcaecati eal hic qui, seco saepe iste.",
+      "desc": "Fugiat dolore asperiores adipisci consequuntur iure sed nemo id distinction, Modi inventore, repellat exercitationem optio dicta minus! Quidem inoliem quisquam eveniet. Architecto deserunt perferendis consequatur eumlinot doloremque fugit a nam temporibus quisquam.",
+      "link": "/",
+      "author": "Sheyna Daniel",
+      "authorThumb": "/assets/images/owner-1.jpg",
+      "authorLink": "/"
+   },
+   "blog": [
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/h_blog-1.jpg",
+         "date": "24",
+         "month": "Mar",
+         "title": "Unde officia omnis pariatur, uni voluptate deserunt obcaecati eal hic qui, saepe iste.",
+         "link": "/",
+         "author": "Sheyna Daniel",
+         "authorThumb": "/assets/images/owner-1.jpg",
+         "authorLink": "/"
+      },
+      {
+         "id": "3",
+         "imgUrl": "/assets/images/h_blog-2.jpg",
+         "date": "26",
+         "month": "Mar",
+         "title": "Unde officia omnis pariatur, uni voluptate deserunt obcaecati eal hic qui, saepe iste.",
+         "link": "/",
+         "author": "Sheyna Daniel",
+         "authorThumb": "/assets/images/owner-1.jpg",
+         "authorLink": "/"
+      },
+      {
+         "id": "4",
+         "imgUrl": "/assets/images/h_blog-3.jpg",
+         "date": "29",
+         "month": "Mar",
+         "title": "Unde officia omnis pariatur, uni voluptate deserunt obcaecati eal hic qui, saepe iste.",
+         "link": "/",
+         "author": "Sheyna Daniel",
+         "authorThumb": "/assets/images/owner-1.jpg",
+         "authorLink": "/"
+      },
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/h_blog-4.jpg",
+         "date": "12",
+         "month": "Mar",
+         "title": "Unde officia omnis pariatur, uni voluptate deserunt obcaecati eal hic qui, saepe iste.",
+         "link": "/",
+         "author": "Sheyna Daniel",
+         "authorThumb": "/assets/images/owner-1.jpg",
+         "authorLink": "/"
+      },
+      {
+         "id": "3",
+         "imgUrl": "/assets/images/h_blog-5.jpg",
+         "date": "16",
+         "month": "Mar",
+         "title": "Unde officia omnis pariatur, uni voluptate deserunt obcaecati eal hic qui, saepe iste.",
+         "link": "/",
+         "author": "Sheyna Daniel",
+         "authorThumb": "/assets/images/owner-1.jpg",
+         "authorLink": "/"
+      },
+      {
+         "id": "4",
+         "imgUrl": "/assets/images/h_blog-6.jpg",
+         "date": "17",
+         "month": "Mar",
+         "title": "Unde officia omnis pariatur, uni voluptate deserunt obcaecati eal hic qui, saepe iste.",
+         "link": "/",
+         "author": "Sheyna Daniel",
+         "authorThumb": "/assets/images/owner-1.jpg",
+         "authorLink": "/"
+      }
+   ]
+}

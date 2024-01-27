@@ -1,0 +1,24 @@
+{
+   "secTitle": "Clients Testimonials",
+   "secHeading": "Vitae sed praesentium tempora ex fugiat animin kalem reiciendis sapuro saepe.",
+   "dataList": [
+      {
+         "id": "1",
+         "imgUrl": "/assets/images/testimonial-1.jpg",
+         "comment": "Dolorem laboriosam quibusdam odionili official vero. Corrupti fugit illum nullato reprehender it eius fugiat animi quisquil, doloribus invento ullam odit maiores eli magnam reprehende quae rerum eni fugit maxime quia.",
+         "name": "Anita Sarkamh"
+      },
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/testimonial-2.jpg",
+         "comment": "Dolorem laboriosam quibusdam odionili official vero. Corrupti fugit illum nullato reprehender it eius fugiat animi quisquil, doloribus invento ullam odit maiores eli magnam reprehende quae rerum eni fugit maxime quia.",
+         "name": "Adam Smith"
+      },
+      {
+         "id": "3",
+         "imgUrl": "/assets/images/testimonial-3.jpg",
+         "comment": "Dolorem laboriosam quibusdam odionili official vero. Corrupti fugit illum nullato reprehender it eius fugiat animi quisquil, doloribus invento ullam odit maiores eli magnam reprehende quae rerum eni fugit maxime quia.",
+         "name": "Elisy Medone"
+      }
+   ]
+}

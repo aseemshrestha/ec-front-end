@@ -1,0 +1,39 @@
+{
+   "secTitle": "Latest News & Updaes",
+   "secHeading": "Vitae sed accusai voluptatem dolorem maiores perferendis quos.",
+   "dataList": [
+      {
+         "id": "1",
+         "imgUrl": "/assets/images/h_blog-1.jpg",
+         "date": "24",
+         "month": "Mar",
+         "title": "Animi eligendi odio corrupti don maiores odit, labore eos alias, vel nihil cum.",
+         "link": "/",
+         "author": "Sheyna Daniel",
+         "authorThumb": "/assets/images/owner-1.jpg",
+         "authorLink": "/"
+      },
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/h_blog-2.jpg",
+         "date": "26",
+         "month": "Mar",
+         "title": "Harum consectetur laboriosa dicta temporibus vitae shiman deserunt commoi.",
+         "link": "/",
+         "author": "David Show",
+         "authorThumb": "/assets/images/owner-2.jpg",
+         "authorLink": "/"
+      },
+      {
+         "id": "3",
+         "imgUrl": "/assets/images/h_blog-3.jpg",
+         "date": "29",
+         "month": "Mar",
+         "title": "Pariatur cupiditate voluptatum sint modi pereto nilami qusem natus quidam.",
+         "link": "/",
+         "author": "Alisha Kim",
+         "authorThumb": "/assets/images/owner-3.jpg",
+         "authorLink": "/"
+      }
+   ]
+}

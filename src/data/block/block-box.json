@@ -1,0 +1,34 @@
+{
+   "secTitle": "What We Do",
+   "secHeading": "Vitae sed accusai voluptatem dolorem maiores perferendis quos.",
+   "dataList": [
+      {
+         "id": "1",
+         "boxClass": "block-box block1",
+         "boxIcon": "icofont-creative",
+         "boxTitle": "Product Design",
+         "boxDesc": "Lorem ipsum dolor sit amet ea consecte adipisic elit. Repellen tenetur aliquam alias."
+      },
+      {
+         "id": "2",
+         "boxClass": "block-box block2",
+         "boxIcon": "icofont-improve",
+         "boxTitle": "Web Development",
+         "boxDesc": "Lorem ipsum dolor sit amet ea consecte adipisic elit. Repellen tenetur aliquam alias."
+      },
+      {
+         "id": "3",
+         "boxClass": "block-box block3",
+         "boxIcon": "icofont-info",
+         "boxTitle": "IT Consultancy",
+         "boxDesc": "Lorem ipsum dolor sit amet ea consecte adipisic elit. Repellen tenetur aliquam alias."
+      },
+      {
+         "id": "4",
+         "boxClass": "block-box block4",
+         "boxIcon": "icofont-customer-care",
+         "boxTitle": "24/7 Support",
+         "boxDesc": "Lorem ipsum dolor sit amet ea consecte adipisic elit. Repellen tenetur aliquam alias."
+      }
+   ]
+}

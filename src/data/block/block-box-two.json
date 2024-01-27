@@ -1,0 +1,23 @@
+[
+   {
+      "id": "1",
+      "boxClass": "block-box d-flex block1",
+      "boxIcon": "icofont-creative",
+      "boxTitle": "Product Design",
+      "boxDesc": "Lorem ipsum dolor sit amet consecte adipisic elit repellen tenetur"
+   },
+   {
+      "id": "2",
+      "boxClass": "block-box d-flex block2",
+      "boxIcon": "icofont-info",
+      "boxTitle": "IT Consultancy",
+      "boxDesc": "Lorem ipsum dolor sit amet consecte adipisic elit repellen tenetur"
+   },
+   {
+      "id": "3",
+      "boxClass": "block-box d-flex block3",
+      "boxIcon": "icofont-customer-care",
+      "boxTitle": "24/7 Support",
+      "boxDesc": "Lorem ipsum dolor sit amet consecte adipisic elit repellen tenetur"
+   }
+]

@@ -1,0 +1,37 @@
+{
+   "secTitle": "Recent Post",
+   "dataList": [
+      {
+         "id": "1",
+         "thumb": "/assets/images/f-post-1.jpg",
+         "date": "Mar 12,2024",
+         "month": "Mar",
+         "title": "Lorem ipsum dolor sit amet...",
+         "link": "/"
+      },
+      {
+         "id": "2",
+         "thumb": "/assets/images/f-post-2.jpg",
+         "date": "Mar 12,2024",
+         "month": "Mar",
+         "title": "Lorem ipsum dolor sit amet...",
+         "link": "/"
+      },
+      {
+         "id": "3",
+         "thumb": "/assets/images/f-post-3.jpg",
+         "date": "Mar 12,2024",
+         "month": "Mar",
+         "title": "Lorem ipsum dolor sit amet...",
+         "link": "/"
+      },
+      {
+         "id": "4",
+         "thumb": "/assets/images/f-post-4.jpg",
+         "date": "Mar 12,2024",
+         "month": "Mar",
+         "title": "Lorem ipsum dolor sit amet...",
+         "link": "/"
+      }
+   ]
+}

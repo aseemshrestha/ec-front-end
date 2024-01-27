@@ -1,0 +1,30 @@
+{
+   "secTitle": "Partner Companies",
+   "secHeading": "Vitae sed accusai voluptatem dolorem maiores perferendis quos.",
+   "dataList": [
+      {
+         "id": "1",
+         "imgUrl": "/assets/images/partner-1.png"
+      },
+      {
+         "id": "2",
+         "imgUrl": "/assets/images/partner-2.png"
+      },
+      {
+         "id": "3",
+         "imgUrl": "/assets/images/partner-3.png"
+      },
+      {
+         "id": "4",
+         "imgUrl": "/assets/images/partner-4.png"
+      },
+      {
+         "id": "5",
+         "imgUrl": "/assets/images/partner-5.png"
+      },
+      {
+         "id": "6",
+         "imgUrl": "/assets/images/partner-6.png"
+      }
+   ]
+}

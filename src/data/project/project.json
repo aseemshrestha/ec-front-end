@@ -1,0 +1,48 @@
+{
+   "secTitle": "Creative Projects",
+   "secHeading": "Vitae sed accusai voluptatem dolorem maiores perferendis quos.",
+   "dataList": [
+      {
+         "id": "1",
+         "targetId": "business",
+         "imgUrl": "/assets/images/project-1.jpg",
+         "category": "business",
+         "proTitle": "Filter Project 1"
+      },
+      {
+         "id": "2",
+         "targetId": "consulting",
+         "imgUrl": "/assets/images/project-2.jpg",
+         "category": "consulting",
+         "proTitle": "Filter Project 2"
+      },
+      {
+         "id": "3",
+         "targetId": "corporate",
+         "imgUrl": "/assets/images/project-3.jpg",
+         "category": "corporate",
+         "proTitle": "Filter Project 3"
+      },
+      {
+         "id": "4",
+         "targetId": "research",
+         "imgUrl": "/assets/images/project-4.jpg",
+         "category": "research",
+         "proTitle": "Filter Project 4"
+      },
+      {
+         "id": "5",
+         "targetId": "branding",
+         "imgUrl": "/assets/images/project-5.jpg",
+         "category": "branding",
+         "proTitle": "Filter Project 5"
+      },
+      {
+         "id": "6",
+         "targetId": "business",
+         "imgUrl": "/assets/images/project-6.jpg",
+         "category": "business",
+         "proTitle": "Filter Project 6"
+      }
+   ]
+}
