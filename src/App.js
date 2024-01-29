@@ -29,7 +29,7 @@ function App() {
         setTimeout(() => {
             spinner.style.display = "none";
             setLoading(false);
-        }, 2000);
+        }, 500);
     }
     return (
         !loading && (
@@ -42,11 +42,11 @@ function App() {
                     <Route path={`${process.env.PUBLIC_URL + "/service"}`} component={Services} />
                     <Route path={`${process.env.PUBLIC_URL + "/service-details"}`} component={ServiceDetails} />
                     <Route path={`${process.env.PUBLIC_URL + "/project"}`} component={Project} />
-                    <Route path={`${process.env.PUBLIC_URL + "/project-details"}`} component={ProjectDetails} />
+                    <Route path={`${process.env.PUBLIC_URL + "/dashboard"}`} component={ProjectDetails} />
                     <Route path={`${process.env.PUBLIC_URL + "/team"}`} component={TeamMember} />
                     <Route path={`${process.env.PUBLIC_URL + "/testimonial"}`} component={Testimonials} />
                     <Route path={`${process.env.PUBLIC_URL + "/price"}`} component={PriceTable} />
-                    <Route path={`${process.env.PUBLIC_URL + "/loginmein"}`} component={Login} />
+                    <Route path={`${process.env.PUBLIC_URL + "/logmein"}`} component={Login} />
                     <Route path={`${process.env.PUBLIC_URL + "/register-me"}`} component={Registration} />
                     <Route path={`${process.env.PUBLIC_URL + "/faq"}`} component={Faq} />
                     <Route path={`${process.env.PUBLIC_URL + "/error"}`} component={Error} />

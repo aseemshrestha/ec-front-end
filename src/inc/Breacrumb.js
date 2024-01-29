@@ -16,7 +16,7 @@ export class BreadcrumbBox extends React.Component {
                             <div className="col-md-12">
                                 <div className="breadcrumb-box d-flex justify-content-between">
                                     <div className="breadcrumb-title">
-                                        <p className="page-desc">Welcome to Afili</p>
+                                        <p className="page-desc">Welcome to Education Center</p>
                                         <h1 className="page-title">{this.props.title}</h1>
                                     </div>
                                     <div className="breadcrumb-content">

@@ -24,9 +24,8 @@ const Header = () => {
                         <div className="col-md-4">
                             <div className="bar-right d-flex justify-content-end">
                                 <ul className="list-unstyled list-inline bar-menu">
-                                    <li className="list-inline-item"><a href={process.env.PUBLIC_URL + "/"}>Sign in</a></li>
-                                    <li className="list-inline-item"><a href={process.env.PUBLIC_URL + "/"}>Register</a></li>
-                                </ul>
+                                    <li className="list-inline-item"><a href={process.env.PUBLIC_URL + "/logmein"}>Sign in</a></li>
+                                 </ul>
                                 <ul className="list-unstyled list-inline bar-social">
                                     <li className="list-inline-item"><a href={process.env.PUBLIC_URL + "/"}><i className="fab fa-facebook-f"></i></a></li>
                                     <li className="list-inline-item"><a href={process.env.PUBLIC_URL + "/"}><i className="fab fa-twitter"></i></a></li>

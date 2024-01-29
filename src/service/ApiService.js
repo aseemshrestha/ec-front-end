@@ -5,9 +5,14 @@ class ApiService {
   registerUser(data) {
     return axios.post(`${BASE_URL}/api/v1/public/create-user`, data);
   }
+
+  login(data) {
+    return axios.post(`${BASE_URL}/api/v1/public/login`, data);
+  }
   fetchBabyInfo(data, headerToken) {
     return axios.get(
-      `${BASE_URL}/api/v1/secured/get-baby-by-username/${data}`,{
+      `${BASE_URL}/api/v1/secured/get-baby-by-username/${data}`,
+      {
         headers: headerToken,
       }
     );
