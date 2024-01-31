@@ -20,6 +20,7 @@ export default function LoginForm() {
         ) {
           localStorage.setItem("access-token", response.data.accessToken);
           localStorage.setItem("refresh-token", response.data.refreshToken);
+          localStorage.setItem("token",response.data.firstName)
           history.push("/dashboard");
         }
       })

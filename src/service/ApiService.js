@@ -9,27 +9,12 @@ class ApiService {
   login(data) {
     return axios.post(`${BASE_URL}/api/v1/public/login`, data);
   }
-  fetchBabyInfo(data, headerToken) {
-    return axios.get(
-      `${BASE_URL}/api/v1/secured/get-baby-by-username/${data}`,
-      {
-        headers: headerToken,
-      }
-    );
-  }
 
-  submitPost(formData, token, options) {
-    return axios.post(`${BASE_URL}/api/v1/secured/submit-post`, formData, {
+  addStudent(data, token) {
+    console.log(token);
+    return axios.post(`${BASE_URL}/api/v1/secured/addStudent`, data, {
       headers: {
-        Authorization: token,
-      },
-      options,
-    });
-  }
-  fetchPost(token) {
-    return axios.get(`${BASE_URL}/api/v1/secured/fetch-post`, {
-      headers: {
-        Authorization: token,
+        Authorization: "Bearer " + token,
       },
     });
   }

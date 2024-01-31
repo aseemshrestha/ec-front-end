@@ -9,12 +9,13 @@ import About from "./pages/about/About";
 import Services from './pages/service/Services';
 import ServiceDetails from "./pages/service/ServiceDetails";
 import Project from "./pages/projects/Project";
-import ProjectDetails from './pages/projects/ProjectDetails';
+import ProjectDetails from './pages/projects/Dashboard';
 import TeamMember from "./pages/team/Team";
 import Testimonials from './pages/testimony/Testimonials';
 import PriceTable from './pages/price-table/Price';
 import Login from './pages/login/Login';
 import Registration from './components/registration/Registration';
+import StudentRegistration from './components/student-registration/StudentRegistration';
 import Faq from "./pages/faq/Faq";
 import Error from "./pages/error/Error";
 import Blog from "./pages/blog/Blog";
@@ -29,7 +30,7 @@ function App() {
         setTimeout(() => {
             spinner.style.display = "none";
             setLoading(false);
-        }, 500);
+        }, 100);
     }
     return (
         !loading && (
@@ -53,6 +54,7 @@ function App() {
                     <Route path={`${process.env.PUBLIC_URL + "/blog"}`} component={Blog} />
                     <Route path={`${process.env.PUBLIC_URL + "/blog-details"}`} component={BlogDetails} />
                     <Route path={`${process.env.PUBLIC_URL + "/contact"}`} component={Contact} />
+                    <Route path={`${process.env.PUBLIC_URL + "/addStudent"}`} component={StudentRegistration} />
                 </Switch>
             </Router>
         )
