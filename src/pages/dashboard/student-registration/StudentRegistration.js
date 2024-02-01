@@ -1,8 +1,8 @@
 import React from 'react';
-import Header from './../../components/header/Header';
+import Header from './../../../components/header/Header';
 import StudentRegistrationForm from './StudentRegistrationForm';
-import Footer from '../../components/footer/Footer';
-import { Styles } from "./styles/registration";
+import Footer from '../../../components/footer/Footer';
+import { Styles } from './styles/registration';
 
 const StudentRegistration = () => {
    return (

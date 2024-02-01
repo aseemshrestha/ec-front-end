@@ -2,8 +2,8 @@ import React from "react";
 import Header from "../../components/header/Header";
 import { BreadcrumbBox } from "../../inc/Breacrumb";
 import Footer from "../../components/footer/Footer";
-import { Styles } from "./styles/projectDetails";
-import { useHistory } from "react-router-dom";
+import { Styles } from "./styles/dashboardDetails";
+import { useHistory, Link } from "react-router-dom";
 
 export default function Dashboard() {
   let history = useHistory();
@@ -13,12 +13,6 @@ export default function Dashboard() {
 
   var decodedString = atob(localStorage.getItem("token"));
   var welcomeMsg = "Hello " + decodedString;
-
-  const logOut = () => {
-    localStorage.removeItem("access-token");
-    localStorage.removeItem("refresh-token");
-    history.push("/");
-  };
 
   return (
     <Styles>
@@ -47,7 +41,9 @@ export default function Dashboard() {
                     <li className="info-item">
                       <i className="info-icon icofont-category"></i>
                       <p>List</p>
-                      <h5>List Students</h5>
+                      <h5>
+                        <Link to="/listStudents">List Students</Link>
+                      </h5>
                     </li>
                     <li className="info-item">
                       <i className="info-icon icofont-location"></i>
@@ -60,11 +56,9 @@ export default function Dashboard() {
                       <h5>Search Students</h5>
                     </li>
                     <li className="info-item">
-                      <i className="info-icon icofont-earth"></i>
-                      <p>Logout</p>
-                      <h5 onClickCapture={logOut}>
-                        <a href="#">Logout</a>
-                      </h5>
+                      <i className="info-icon las la-calendar"></i>
+                      <p>Event</p>
+                      <h5>Create Event</h5>
                     </li>
                     <li className="info-item">
                       <i className="info-icon icofont-link"></i>

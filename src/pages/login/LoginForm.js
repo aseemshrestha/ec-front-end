@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router-dom";
 import ApiService from "../../service/ApiService";
 import { useHistory } from "react-router-dom";
 export default function LoginForm() {
@@ -20,17 +19,13 @@ export default function LoginForm() {
         ) {
           localStorage.setItem("access-token", response.data.accessToken);
           localStorage.setItem("refresh-token", response.data.refreshToken);
-          localStorage.setItem("token",response.data.firstName)
+          localStorage.setItem("token", response.data.firstName);
           history.push("/dashboard");
         }
       })
       .catch((error) => {
-        // console.log(error.response.data.error + " " + error.response.data.status);
         console.log(error);
-        if (
-          error.response.data.error == "Forbidden" &&
-          error.response.data.status === 403
-        ) {
+        if (error.response.status === 403) {
           setMessage("Username or Password is invalid.");
         }
       });

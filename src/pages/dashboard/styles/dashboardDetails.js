@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { colors } from './../../../inc/elements';
+import { colors } from '../../../inc/elements';
 
 export const Styles = styled.div`
     .project-details-page {

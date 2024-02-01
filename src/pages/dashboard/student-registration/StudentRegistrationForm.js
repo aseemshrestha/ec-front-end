@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { Link } from "react-router-dom";
-import ApiService from "../../service/ApiService";
+import ApiService from "../../../service/ApiService";
 import { useHistory } from "react-router-dom";
 export default function StudentRegistrationForm() {
   const [message, setMessage] = useState(null);

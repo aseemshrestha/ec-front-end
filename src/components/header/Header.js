@@ -31,9 +31,8 @@ export default function Header() {
   } else {
     signIn = (
       <li className="list-inline-item">
-        <a href="#">
-          <span onClickCapture={logOut}>Sign out</span>
-        </a>
+          <Link to="" onClickCapture={logOut}>Sign out</Link>
+
       </li>
     );
   }
