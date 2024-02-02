@@ -94,11 +94,14 @@ export default function ListStudents() {
                           <td>{dataObj.email + " " + dataObj.phone}</td>
                           <td>{dataObj.universityApplied}</td>
                           <td>{dataObj.i20Status}</td>
-                          <td>{dataObj.visaInterviewDate}</td>
+                          <td>{dataObj.visaInterviewDate.substring(0,10)}</td>
                           <td>{dataObj.visaStatus}</td>
                           <td>{dataObj.createdDate}</td>
                           <td>
-                            <Link to="#">Update</Link>
+                            <Link to={{
+                              pathname: "/updateStudents",
+                              state: dataObj
+                            }}>Update</Link>
                           </td>
                           <td>
                             <Link

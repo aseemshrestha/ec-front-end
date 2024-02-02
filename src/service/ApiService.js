@@ -35,6 +35,13 @@ class ApiService {
       },
     });
   }
+  updateStudent(data, token) {
+    return axios.put(`${BASE_URL}/api/v1/secured/updateStudent`, data, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+  }
 }
 
 export default new ApiService();
