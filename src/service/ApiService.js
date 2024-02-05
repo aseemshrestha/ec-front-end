@@ -19,9 +19,25 @@ class ApiService {
       },
     });
   }
+  addUniversity(data, token) {
+    // console.log(token);
+    return axios.post(`${BASE_URL}/api/v1/secured/addUniversity`, data, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+  }
   listStudents(token) {
     // console.log(token);
     return axios.get(`${BASE_URL}/api/v1/secured/showAll`, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+  }
+  listUniversities(token) {
+    // console.log(token);
+    return axios.get(`${BASE_URL}/api/v1/secured/showUniversities`, {
       headers: {
         Authorization: "Bearer " + token,
       },

@@ -22,7 +22,7 @@ export default function StudentSearchForm() {
   } = useForm();
   const onSubmit = (data, e) => {
     e.preventDefault();
-     alert(JSON.stringify(data));
+   //  alert(JSON.stringify(data));
     ApiService.searchStudents(data, localStorage.getItem("access-token"))
       .then((response) => {
         console.log(response);

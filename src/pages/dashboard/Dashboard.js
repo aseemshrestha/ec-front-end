@@ -32,7 +32,7 @@ export default function Dashboard() {
                 <div className="project-info">
                   <ul className="list-unstyled">
                     <li className="info-item">
-                      <i className="info-icon icofont-skillful"></i>
+                      <i className="info-icon icofont-manage icon1"></i>
                       <p>Student</p>
                       <h5>
                         <a href="/addStudent">Add Student</a>
@@ -48,13 +48,23 @@ export default function Dashboard() {
                     <li className="info-item">
                       <i className="info-icon icofont-location"></i>
                       <p>Affiliations</p>
-                      <h5>Universities</h5>
+                      <h5>
+                        {" "}
+                        <Link to="/addUniversity">Add University</Link>
+                      </h5>
                     </li>
                     <li className="info-item">
-                      <i className="info-icon las la-find"></i>
+                      <i className="info-icon bi bi-search"></i>
                       <p>Search</p>
                       <h5>
                         <Link to="/searchStudents">Search Students</Link>
+                      </h5>
+                    </li>
+                    <li className="info-item">
+                      <i className="info-icon icofont-category"></i>
+                      <p>Search</p>
+                      <h5>
+                        <Link to="/listUniversities">List Universities</Link>
                       </h5>
                     </li>
                     <li className="info-item">

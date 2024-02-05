@@ -204,7 +204,7 @@ export default function StudentRegistrationForm(props) {
               <option value="received">Received</option>
               <option value="denied">Denied</option>
             </select>
-            {errors?.service?.value == "" && (
+            {errors?.i20Status?.value == "" && (
               <label className="error">Select an option</label>
             )}
           </p>
@@ -239,7 +239,7 @@ export default function StudentRegistrationForm(props) {
               <option value="received">Received</option>
               <option value="denied">Denied</option>
             </select>
-            {errors?.service?.value == "" && (
+            {errors?.visaStatus?.value == "" && (
               <label className="error">Select an option</label>
             )}
           </p>

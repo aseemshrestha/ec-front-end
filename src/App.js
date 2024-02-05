@@ -15,7 +15,9 @@ import PriceTable from "./pages/price-table/Price";
 import Login from "./pages/login/Login";
 import Registration from "./pages/registration/Registration";
 import StudentRegistration from "./pages/dashboard/student-registration/StudentRegistration";
+import UniversityRegistration from "./pages/dashboard/university-registration/UniversityRegistration";
 import ListStudents from "./pages/dashboard/ListStudents";
+import ListUniversities from "./pages/dashboard/ListUniversities";
 import UpdateStudents from "./pages/dashboard/student-update/StudentUpdate";
 import SearchStudents from "./pages/dashboard/search-students/StudentSearch";
 import Faq from "./pages/faq/Faq";
@@ -111,6 +113,14 @@ function App() {
            <Route
             path={`${process.env.PUBLIC_URL + "/searchStudents"}`}
             component={SearchStudents}
+          />
+           <Route
+            path={`${process.env.PUBLIC_URL + "/addUniversity"}`}
+            component={UniversityRegistration}
+          />
+           <Route
+            path={`${process.env.PUBLIC_URL + "/listUniversities"}`}
+            component={ListUniversities}
           />
         </Switch>
       </Router>
