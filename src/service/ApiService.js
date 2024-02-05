@@ -27,6 +27,14 @@ class ApiService {
       },
     });
   }
+  searchStudents(data, token) {
+    console.log(data + " " + token);
+     return axios.post(`${BASE_URL}/api/v1/secured/searchStudent`, data, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+  }
   deleteStudent(data, token) {
     // console.log(token);
     return axios.post(`${BASE_URL}/api/v1/secured/deleteStudent`, data, {

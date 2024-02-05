@@ -17,6 +17,7 @@ import Registration from "./pages/registration/Registration";
 import StudentRegistration from "./pages/dashboard/student-registration/StudentRegistration";
 import ListStudents from "./pages/dashboard/ListStudents";
 import UpdateStudents from "./pages/dashboard/student-update/StudentUpdate";
+import SearchStudents from "./pages/dashboard/search-students/StudentSearch";
 import Faq from "./pages/faq/Faq";
 import Blog from "./pages/blog/Blog";
 import BlogDetails from "./pages/blog/BlogDetails";
@@ -106,6 +107,10 @@ function App() {
           <Route
             path={`${process.env.PUBLIC_URL + "/updateStudents"}`}
             component={UpdateStudents}
+          />
+           <Route
+            path={`${process.env.PUBLIC_URL + "/searchStudents"}`}
+            component={SearchStudents}
           />
         </Switch>
       </Router>

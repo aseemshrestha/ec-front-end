@@ -51,9 +51,11 @@ export default function Dashboard() {
                       <h5>Universities</h5>
                     </li>
                     <li className="info-item">
-                      <i className="info-icon las la-calendar"></i>
+                      <i className="info-icon las la-find"></i>
                       <p>Search</p>
-                      <h5>Search Students</h5>
+                      <h5>
+                        <Link to="/searchStudents">Search Students</Link>
+                      </h5>
                     </li>
                     <li className="info-item">
                       <i className="info-icon las la-calendar"></i>

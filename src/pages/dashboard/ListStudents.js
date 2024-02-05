@@ -94,7 +94,7 @@ export default function ListStudents() {
                           <td>{dataObj.email + " " + dataObj.phone}</td>
                           <td>{dataObj.universityApplied}</td>
                           <td>{dataObj.i20Status}</td>
-                          <td>{dataObj.visaInterviewDate.substring(0,10)}</td>
+                          <td>{dataObj.visaInterviewDate == null ? null : dataObj.visaInterviewDate.substring(0,10)}</td>
                           <td>{dataObj.visaStatus}</td>
                           <td>{dataObj.createdDate}</td>
                           <td>
