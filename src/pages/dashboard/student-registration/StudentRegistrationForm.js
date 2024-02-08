@@ -34,7 +34,11 @@ export default function StudentRegistrationForm() {
 
   return (
     <form className="registration_form" onSubmit={handleSubmit(onSubmit)}>
-      <Link to="/dashboard">Back to Dashboard</Link>
+      <Link to="/dashboard">Back to Dashboard</Link> |
+      <Link to="/listStudents">List Students</Link> |
+      <Link to="/searchStudents">Search Student</Link> |
+      <Link to="/addUniversity">Add University</Link> |
+      <Link to="/listUniversities">List Universities</Link>
       <div className="text-left pt-4 text-danger">
         {message} <br />
       </div>

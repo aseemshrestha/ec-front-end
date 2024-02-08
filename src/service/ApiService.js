@@ -45,7 +45,7 @@ class ApiService {
   }
   searchStudents(data, token) {
     console.log(data + " " + token);
-     return axios.post(`${BASE_URL}/api/v1/secured/searchStudent`, data, {
+    return axios.post(`${BASE_URL}/api/v1/secured/searchStudent`, data, {
       headers: {
         Authorization: "Bearer " + token,
       },
@@ -59,8 +59,23 @@ class ApiService {
       },
     });
   }
+  deleteUniversity(data, token) {
+    // console.log(token);
+    return axios.post(`${BASE_URL}/api/v1/secured/deleteUniversity`, data, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+  }
   updateStudent(data, token) {
     return axios.put(`${BASE_URL}/api/v1/secured/updateStudent`, data, {
+      headers: {
+        Authorization: "Bearer " + token,
+      },
+    });
+  }
+  updateUniversity(data, token) {
+    return axios.put(`${BASE_URL}/api/v1/secured/updateUniversity`, data, {
       headers: {
         Authorization: "Bearer " + token,
       },

@@ -32,16 +32,16 @@ export default function ListUniversities() {
   }, []);
 
   const handleDelete = (dataObj) => {
-   // console.log("data Obj", dataObj);
-   /*  ApiService.deleteStudent(dataObj, accessToken)
+    // console.log("data Obj", dataObj);
+    ApiService.deleteUniversity(dataObj, accessToken)
       .then((response) => {
         console.log(response.data);
       })
       .then(() => {
-        ApiService.listStudents(accessToken)
+        ApiService.listUniversities(accessToken)
           .then((response) => {
             setCount(response.data.length);
-            setStudents(response.data);
+            setUniversities(response.data);
           })
           .catch((error) => {
             console.log(error);
@@ -49,7 +49,7 @@ export default function ListUniversities() {
       })
       .catch((error) => {
         console.log(error);
-      }); */
+      });
   };
 
   return (
@@ -66,7 +66,10 @@ export default function ListUniversities() {
         <section className="project-details-area">
           <div className="container">
             <Link to="/dashboard">Back to Dashboard </Link> |{" "}
-            <Link to="/addStudent">Add New Student </Link> <br />
+            <Link to="/addUniversity">Add New University</Link> |{" "}
+            <Link to="/addStudent">Add New Student | </Link>
+            <Link to="/searchStudents">Search Student</Link>
+            <br />
             <br />
             <div className="row">
               <h6>Total #of Universities: {count}</h6> <br />
@@ -92,14 +95,22 @@ export default function ListUniversities() {
                         <tr key={index}>
                           <td>{dataObj.universityName}</td>
                           <td>{dataObj.email + " " + dataObj.phone}</td>
-                          <td>{dataObj.universityAddress + " " + dataObj.universityAddress1}</td>
+                          <td>
+                            {dataObj.universityAddress +
+                              " " +
+                              dataObj.universityAddress1}
+                          </td>
                           <td>{dataObj.status}</td>
                           <td>{dataObj.lastUpdated}</td>
                           <td>
-                            <Link to={{
-                              pathname: "/",
-                              state: dataObj
-                            }}>Update</Link>
+                            <Link
+                              to={{
+                                pathname: "/updateUniversity",
+                                state: dataObj,
+                              }}
+                            >
+                              Update
+                            </Link>
                           </td>
                           <td>
                             <Link

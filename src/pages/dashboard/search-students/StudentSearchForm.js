@@ -61,7 +61,7 @@ export default function StudentSearchForm() {
     <form className="registration_form" onSubmit={handleSubmit(onSubmit)}>
       <Link to="/dashboard">Back to Dashboard</Link> |{" "}
       <Link to="/listStudents">List Students</Link> |{" "}
-      <Link to="/addStudents">Add Students</Link>
+      <Link to="/addStudent">Add Students</Link>
       <div className="text-left pt-4 text-danger">{message}</div>
       <div className="row">
         <div className="col-md-12">

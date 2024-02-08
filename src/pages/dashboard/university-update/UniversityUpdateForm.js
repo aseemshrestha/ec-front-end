@@ -6,14 +6,15 @@ import { useHistory } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
-export default function StudentUpdateForm(props) {
+export default function UniversityUpdateForm(props) {
+  //console.log(props);
   let history = useHistory();
   if (!localStorage.getItem("access-token") && !localStorage.getItem("token")) {
     history.push("/");
   }
 
   const [message, setMessage] = useState(null);
-  const [date, setDate] = useState(new Date(props.data.visaInterviewDate));
+  const [date, setDate] = useState(new Date(props.data.approvalDate));
 
   //console.log(new Date(props.data.visaInterviewDate) + "  " + Date.now().toString());
 
@@ -27,7 +28,7 @@ export default function StudentUpdateForm(props) {
   } = useForm();
 
   const handleChange = (dateChange) => {
-    setValue("visaInterviewDate", dateChange, {
+    setValue("approvalDate", dateChange, {
       shouldDirty: true,
     });
     setDate(dateChange);
@@ -35,13 +36,13 @@ export default function StudentUpdateForm(props) {
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-   // alert(JSON.stringify(data));
+    // alert(JSON.stringify(data));
     var token = localStorage.getItem("access-token");
-    ApiService.updateStudent(data, token)
+    ApiService.updateUniversity(data, token)
       .then((response) => {
         console.log(response);
         e.target.reset();
-        history.push("/listStudents");
+        history.push("/listUniversities");
       })
       .catch((error) => {
         console.log(error);
@@ -52,7 +53,8 @@ export default function StudentUpdateForm(props) {
   return (
     <form className="registration_form" onSubmit={handleSubmit(onSubmit)}>
       <Link to="/dashboard">Back to Dashboard</Link> |{" "}
-      <Link to="/listStudents">List Students</Link>
+      <Link to="/listStudents">List Students</Link> |{" "}
+      <Link to="/addStudent">Add Student</Link>
       <div className="text-left pt-4 text-danger">
         {message} <br />
       </div>
@@ -68,55 +70,86 @@ export default function StudentUpdateForm(props) {
               className="form-control"
             />
           </p>
+        </div>
+        <div className="col-md-12">
           <p className="form-box">
             <label>
-              <label style={{ color: "#808080" }}>First Name</label>
+              <label style={{ color: "#808080" }}>University Name</label>
             </label>
             <input
-              {...register("firstName", {
+              {...register("universityName", {
                 required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
+                maxLength: 200,
+                pattern: /^[A-Za-z ,]+$/i,
               })}
               type="text"
-              defaultValue={props.data.firstName}
+              defaultValue={props.data.universityName}
               className="form-control"
             />
-            {errors?.firstName?.type === "required" && (
+            {errors?.universityName?.type === "required" && (
               <label className="error">This field is required</label>
             )}
-            {errors?.firstName?.type === "maxLength" && (
+            {errors?.universityName?.type === "maxLength" && (
               <label className="error">
-                First name cannot exceed 20 characters
+                University name cannot exceed 200 characters
               </label>
             )}
-            {errors?.firstName?.type === "pattern" && (
+            {errors?.universityName?.type === "pattern" && (
               <label className="error">Alphabetical characters only</label>
             )}
           </p>
         </div>
         <div className="col-md-12">
           <p className="form-box">
-            <label style={{ color: "#808080" }}>Last Name</label>
+            <label style={{ color: "#808080" }}>University Address </label>
             <input
-              {...register("lastName", {
+              {...register("universityAddress", {
                 required: true,
-                maxLength: 20,
-                pattern: /^[A-Za-z]+$/i,
+                maxLength: 100,
+                pattern: /^[A-Za-z, ]+$/i,
               })}
               type="text"
               className="form-control"
-              defaultValue={props.data.lastName}
+              defaultValue={props.data.universityAddress}
             />
-            {errors?.lastName?.type === "required" && (
+            {errors?.universityAddress?.type === "required" && (
               <label className="error">This field is required</label>
             )}
-            {errors?.lastName?.type === "maxLength" && (
+            {errors?.universityAddress?.type === "maxLength" && (
               <label className="error">
-                First name cannot exceed 20 characters
+                University Address cannot exceed 200 chars.
               </label>
             )}
-            {errors?.lastName?.type === "pattern" && (
+            {errors?.universityAddress?.type === "pattern" && (
+              <label className="error">Alphabetical characters only</label>
+            )}
+          </p>
+        </div>
+
+        <div className="col-md-12">
+          <p className="form-box">
+            <label style={{ color: "#808080" }}>
+              University Address contd..{" "}
+            </label>
+            <input
+              {...register("universityAddress1", {
+                required: false,
+                maxLength: 200,
+                pattern: /^[A-Za-z ]+$/i,
+              })}
+              type="text"
+              className="form-control"
+              defaultValue={props.data.universityAddress1}
+            />
+            {errors?.universityAddress?.type === "required" && (
+              <label className="error">This field is required</label>
+            )}
+            {errors?.universityAddress?.type === "maxLength" && (
+              <label className="error">
+                University Address cannot exceed 200 chars.
+              </label>
+            )}
+            {errors?.universityAddress?.type === "pattern" && (
               <label className="error">Alphabetical characters only</label>
             )}
           </p>
@@ -144,28 +177,26 @@ export default function StudentUpdateForm(props) {
         </div>
         <div className="col-md-12">
           <p className="form-box">
-            <label style={{ color: "#808080" }}>University</label>
+            <label style={{ color: "#808080" }}>Contact Person</label>
             <input
-              {...register("universityApplied", {
+              {...register("contactPerson", {
                 required: true,
                 maxLength: 120,
-                // pattern: /^[A-Za-z]+$/i,
+                pattern: /^[A-Za-z ]+$/i,
               })}
               type="text"
-              defaultValue={props.data.universityApplied}
+              defaultValue={props.data.contactPerson}
               className="form-control"
             />
-            {errors?.uniName?.type === "required" && (
+            {errors?.contactPerson?.type === "required" && (
               <label className="error">This field is required</label>
             )}
-            {errors?.uniName?.type === "maxLength" && (
-              <label className="error">
-                First name cannot exceed 120 characters
-              </label>
+            {errors?.contactPerson?.type === "maxLength" && (
+              <label className="error">Name cannot exceed 120 characters</label>
             )}
-            {/* {errors?.uniName?.type === "pattern" && (
+            {errors?.uniName?.type === "pattern" && (
               <label className="error">Alphabetical characters only</label>
-            )} */}
+            )}
           </p>
         </div>
 
@@ -192,16 +223,16 @@ export default function StudentUpdateForm(props) {
 
         <div className="col-md-12">
           <p className="form-box">
-            <label style={{ color: "#808080" }}>i20 Status</label>
+            <label style={{ color: "#808080" }}>Application Status</label>
             <select
-              {...register("i20Status", { required: true })}
-              defaultValue={props.data.i20Status}
+              {...register("status", { required: true })}
+              defaultValue={props.data.status}
               className="form-select"
             >
-              <option value="">i20 Status</option>
+              <option value="">Application Status</option>
               <option value="notapplied">Not Applied</option>
               <option value="applied">Applied</option>
-              <option value="received">Received</option>
+              <option value="approved">Approved</option>
               <option value="denied">Denied</option>
             </select>
             {errors?.i20Status?.value == "" && (
@@ -209,39 +240,20 @@ export default function StudentUpdateForm(props) {
             )}
           </p>
         </div>
+
         <div className="col-md-12">
           <p className="form-box">
-            <label style={{ color: "#808080" }}>Visa Interview Date</label>
+            <label style={{ color: "#808080" }}>Approval Date</label>
 
             <br />
             <Controller
-              name="visaInterviewDate"
+              name="approvalDate"
               control={control}
-              defaultValue={props.data.visaInterviewDate}
+              defaultValue={props.data.approvalDate}
               render={() => (
-                <DatePicker selected={date} onChange={handleChange} minDate={new Date()}/>
+                <DatePicker selected={date} onChange={handleChange} maxDate={new Date()} />
               )}
             />
-          </p>
-        </div>
-
-        <div className="col-md-12">
-          <p className="form-box">
-            <label style={{ color: "#808080" }}>Visa Status</label>
-            <select
-              {...register("visaStatus", { required: true })}
-              defaultValue={props.data.i20Status}
-              className="form-select"
-            >
-              <option value="">i20 Status</option>
-              <option value="notapplied">Not Applied</option>
-              <option value="applied">Applied</option>
-              <option value="received">Received</option>
-              <option value="denied">Denied</option>
-            </select>
-            {errors?.visaStatus?.value == "" && (
-              <label className="error">Select an option</label>
-            )}
           </p>
         </div>
 
@@ -274,7 +286,7 @@ export default function StudentUpdateForm(props) {
       </div>
       <div className="col-md-12">
         <button className="submit-btn btn btn-primary" type="submit">
-          Update Student
+          Update University
         </button>
       </div>
     </form>

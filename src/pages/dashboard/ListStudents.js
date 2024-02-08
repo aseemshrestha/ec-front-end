@@ -64,7 +64,11 @@ export default function ListStudents() {
         <section className="project-details-area">
           <div className="container">
             <Link to="/dashboard">Back to Dashboard </Link> |{" "}
-            <Link to="/addStudent">Add New Student </Link> <br />
+            <Link to="/addStudent">Add New Student </Link> |{" "}
+            <Link to="/searchStudents">Search Student </Link> |{" "}
+            <Link to="/addUniversity">Add New University</Link> |{" "}
+            <Link to="/listUniversities">List University</Link> 
+            <br />
             <br />
             <div className="row">
               <h6>Total #of Students: {count}</h6> <br />
