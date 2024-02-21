@@ -67,7 +67,7 @@ export default function ListStudents() {
             <Link to="/addStudent">Add New Student </Link> |{" "}
             <Link to="/searchStudents">Search Student </Link> |{" "}
             <Link to="/addUniversity">Add New University</Link> |{" "}
-            <Link to="/listUniversities">List University</Link> 
+            <Link to="/listUniversities">List University</Link>
             <br />
             <br />
             <div className="row">
@@ -98,14 +98,22 @@ export default function ListStudents() {
                           <td>{dataObj.email + " " + dataObj.phone}</td>
                           <td>{dataObj.universityApplied}</td>
                           <td>{dataObj.i20Status}</td>
-                          <td>{dataObj.visaInterviewDate == null ? null : dataObj.visaInterviewDate.substring(0,10)}</td>
+                          <td>
+                            {dataObj.visaInterviewDate == null
+                              ? null
+                              : dataObj.visaInterviewDate.substring(0, 10)}
+                          </td>
                           <td>{dataObj.visaStatus}</td>
                           <td>{dataObj.createdDate}</td>
                           <td>
-                            <Link to={{
-                              pathname: "/updateStudents",
-                              state: dataObj
-                            }}>Update</Link>
+                            <Link
+                              to={{
+                                pathname: "/updateStudents",
+                                state: dataObj,
+                              }}
+                            >
+                              Update
+                            </Link>
                           </td>
                           <td>
                             <Link
@@ -115,6 +123,9 @@ export default function ListStudents() {
                               Delete
                             </Link>
                           </td>
+                        
+                          <td>{dataObj.docs.map(d => (<li key ={index}><Link to ={{pathname: d}} target='_blank'>{d}</Link></li>))}</td>
+                       
                         </tr>
                       );
                     })}

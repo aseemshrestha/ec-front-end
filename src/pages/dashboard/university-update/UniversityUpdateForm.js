@@ -7,14 +7,14 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 export default function UniversityUpdateForm(props) {
-  //console.log(props);
+  console.log(props);
   let history = useHistory();
   if (!localStorage.getItem("access-token") && !localStorage.getItem("token")) {
     history.push("/");
   }
 
   const [message, setMessage] = useState(null);
-  const [date, setDate] = useState(new Date(props.data.approvalDate));
+  const [date, setDate] = useState(new Date());
 
   //console.log(new Date(props.data.visaInterviewDate) + "  " + Date.now().toString());
 
@@ -235,7 +235,7 @@ export default function UniversityUpdateForm(props) {
               <option value="approved">Approved</option>
               <option value="denied">Denied</option>
             </select>
-            {errors?.i20Status?.value == "" && (
+            {errors?.status?.value == "" && (
               <label className="error">Select an option</label>
             )}
           </p>
@@ -271,14 +271,14 @@ export default function UniversityUpdateForm(props) {
               className="form-control"
             />
 
-            {errors?.message?.type === "minLength" && (
+            {errors?.additionalComments?.type === "minLength" && (
               <label className="error">
-                Message should be atleast 10 characters long
+                Comments should be atleast 10 characters long
               </label>
             )}
-            {errors?.message?.type === "maxLength" && (
+            {errors?.additionalComments?.type === "maxLength" && (
               <label className="error">
-                Message cannot exceed 300 characters
+                Comments cannot exceed 300 characters
               </label>
             )}
           </p>

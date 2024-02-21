@@ -19,7 +19,6 @@ import UniversityRegistration from "./pages/dashboard/university-registration/Un
 import ListStudents from "./pages/dashboard/ListStudents";
 import ListUniversities from "./pages/dashboard/ListUniversities";
 import UpdateStudents from "./pages/dashboard/student-update/StudentUpdate";
-import UpdateUniversity from "./pages/dashboard/university-update/UniversityUpdate";
 import SearchStudents from "./pages/dashboard/search-students/StudentSearch";
 import Faq from "./pages/faq/Faq";
 import Blog from "./pages/blog/Blog";
@@ -110,10 +109,6 @@ function App() {
           <Route
             path={`${process.env.PUBLIC_URL + "/updateStudents"}`}
             component={UpdateStudents}
-          />
-          <Route
-            path={`${process.env.PUBLIC_URL + "/updateUniversity"}`}
-            component={UpdateUniversity}
           />
            <Route
             path={`${process.env.PUBLIC_URL + "/searchStudents"}`}

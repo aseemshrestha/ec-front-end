@@ -25,7 +25,7 @@ export default function LoginForm() {
       })
       .catch((error) => {
         console.log(error);
-        if (error.response.status === 403) {
+        if (error !== undefined && error.response.status === 403) {
           setMessage("Username or Password is invalid.");
         }
       });

@@ -1,10 +1,16 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm, Controller } from "react-hook-form";
 import { Link } from "react-router-dom";
 import ApiService from "../../../service/ApiService";
 import { useHistory } from "react-router-dom";
 import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
+import { FilePond, registerPlugin } from "react-filepond";
+import "filepond/dist/filepond.min.css";
+import FilePondPluginFileValidateType from "filepond-plugin-file-validate-type";
+import FilePondPluginFileValidateSize from "filepond-plugin-file-validate-size";
+
+registerPlugin(FilePondPluginFileValidateType, FilePondPluginFileValidateSize);
 
 export default function StudentUpdateForm(props) {
   let history = useHistory();
@@ -14,8 +20,7 @@ export default function StudentUpdateForm(props) {
 
   const [message, setMessage] = useState(null);
   const [date, setDate] = useState(new Date(props.data.visaInterviewDate));
-
-  //console.log(new Date(props.data.visaInterviewDate) + "  " + Date.now().toString());
+  const [files, setFiles] = useState([]);
 
   const {
     register,
@@ -32,12 +37,37 @@ export default function StudentUpdateForm(props) {
     });
     setDate(dateChange);
   };
+  const onFileUpload = (fileItems) => {
+    const fileMetaDta = fileItems.map((fileItem) => fileItem.file);
+    setValue("files", fileMetaDta, {
+      shouldDirty: true,
+    });
+    // setFiles(files);
+    setFiles(fileMetaDta);
+  };
 
   const onSubmit = (data, e) => {
     e.preventDefault();
-   // alert(JSON.stringify(data));
     var token = localStorage.getItem("access-token");
-    ApiService.updateStudent(data, token)
+    const formData = new FormData();
+
+    if (files.length > 0) {
+      for (var i = 0; i < files.length; i++) {
+        formData.append("file", files[i]);
+      }
+    }
+    formData.append("id", data.id);
+    formData.append("firstName", data.firstName);
+    formData.append("lastName", data.lastName);
+    formData.append("email", data.email);
+    formData.append("i20Status", data.i20Status);
+    formData.append("phone", data.phone);
+    formData.append("universityApplied", data.universityApplied);
+    formData.append("visaStatus", data.visaStatus);
+    formData.append("additionalComments", data.additionalComments);
+    formData.append("visaInterviewDate", data.visaInterviewDate);
+
+    ApiService.updateStudent(formData, token)
       .then((response) => {
         console.log(response);
         e.target.reset();
@@ -45,13 +75,17 @@ export default function StudentUpdateForm(props) {
       })
       .catch((error) => {
         console.log(error);
-        setMessage(error.response.data.message);
+        setMessage(error);
       });
   };
 
   return (
-    <form className="registration_form" onSubmit={handleSubmit(onSubmit)}>
-      <Link to="/dashboard">Back to Dashboard</Link> |{" "}
+    <form
+      className="registration_form"
+      onSubmit={handleSubmit(onSubmit)}
+      encType="multipart/form-data"
+    >
+      <Link to="/dashboard">Back to Dashboard </Link> |{" "}
       <Link to="/listStudents">List Students</Link>
       <div className="text-left pt-4 text-danger">
         {message} <br />
@@ -68,6 +102,8 @@ export default function StudentUpdateForm(props) {
               className="form-control"
             />
           </p>
+        </div>
+        <div className="col-md-12">
           <p className="form-box">
             <label>
               <label style={{ color: "#808080" }}>First Name</label>
@@ -121,7 +157,6 @@ export default function StudentUpdateForm(props) {
             )}
           </p>
         </div>
-
         <div className="col-md-12">
           <p className="form-box">
             <label style={{ color: "#808080" }}>Email</label>
@@ -168,7 +203,6 @@ export default function StudentUpdateForm(props) {
             )} */}
           </p>
         </div>
-
         <div className="col-md-12">
           <p className="form-box">
             <label style={{ color: "#808080" }}>Phone</label>
@@ -189,7 +223,6 @@ export default function StudentUpdateForm(props) {
             )}
           </p>
         </div>
-
         <div className="col-md-12">
           <p className="form-box">
             <label style={{ color: "#808080" }}>i20 Status</label>
@@ -210,27 +243,29 @@ export default function StudentUpdateForm(props) {
           </p>
         </div>
         <div className="col-md-12">
-          <p className="form-box">
-            <label style={{ color: "#808080" }}>Visa Interview Date</label>
+          <label style={{ color: "#808080" }}>Visa Interview Date</label>
 
-            <br />
+          <p className="form-box">
             <Controller
               name="visaInterviewDate"
               control={control}
               defaultValue={props.data.visaInterviewDate}
               render={() => (
-                <DatePicker selected={date} onChange={handleChange} minDate={new Date()}/>
+                <DatePicker
+                  selected={date}
+                  onChange={handleChange}
+                  minDate={new Date()}
+                />
               )}
             />
           </p>
         </div>
-
         <div className="col-md-12">
           <p className="form-box">
             <label style={{ color: "#808080" }}>Visa Status</label>
             <select
               {...register("visaStatus", { required: true })}
-              defaultValue={props.data.i20Status}
+              defaultValue={props.data.visaStatus}
               className="form-select"
             >
               <option value="">i20 Status</option>
@@ -244,7 +279,6 @@ export default function StudentUpdateForm(props) {
             )}
           </p>
         </div>
-
         <div className="col-lg-30">
           <p className="form-box">
             <label style={{ color: "#808080" }}>Additional Comments</label>
@@ -270,6 +304,51 @@ export default function StudentUpdateForm(props) {
               </label>
             )}
           </p>
+        </div>
+        <div className="col-lg-30">
+          <span className="form-box">
+            <label style={{ color: "#808080" }}>
+              Upload files ( if any, maxSize:5mb, maxfiles:10 )
+            </label>
+            <Controller
+              name="files"
+              control={control}
+              render={() => (
+                <FilePond
+                  control={control}
+                  files={files}
+                  allowMultiple={true}
+                  acceptedFileTypes={[
+                    "image/*",
+                    "application/pdf",
+                    "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+                  ]}
+                  maxFileSize={"5MB"}
+                  maxFiles={10}
+                  credits={false}
+                  onupdatefiles={onFileUpload}
+                />
+              )}
+            />
+
+            {/* <FilePond
+              name="files"
+              control={control}
+              files={files}
+              allowMultiple={true}
+              maxFiles={10}
+              credits={false}
+              acceptedFileTypes={[
+                "image/*",
+                "application/pdf",
+                ".docx",
+                "text/plain",
+              ]}
+              maxFileSize={"5MB"}
+              //  onupdatefiles={setFiles}
+              onupdatefiles={test}
+            ></FilePond> */}
+          </span>
         </div>
       </div>
       <div className="col-md-12">

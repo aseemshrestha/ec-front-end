@@ -162,7 +162,7 @@ export default function StudentRegistrationForm() {
         <div className="col-md-12">
           <p className="form-box">
             <select
-              {...register("service", { required: true })}
+              {...register("i20Status", { required: true })}
               defaultValue=""
               className="form-select"
             >
@@ -172,7 +172,7 @@ export default function StudentRegistrationForm() {
               <option value="received">Received</option>
               <option value="denied">Denied</option>
             </select>
-            {errors?.service?.value == "" && (
+            {errors?.i20Status?.value == "" && (
               <label className="error">Select an option</label>
             )}
           </p>
@@ -181,7 +181,7 @@ export default function StudentRegistrationForm() {
         <div className="col-lg-30">
           <p className="form-box">
             <textarea
-              {...register("message", {
+              {...register("additionalComments", {
                 required: false,
                 minLength: 10,
                 maxLength: 300,
@@ -190,14 +190,14 @@ export default function StudentRegistrationForm() {
               className="form-control"
             />
 
-            {errors?.message?.type === "minLength" && (
+            {errors?.additionalComments?.type === "minLength" && (
               <label className="error">
-                Message should be atleast 10 characters long
+               Additional Comments should be atleast 10 characters long
               </label>
             )}
-            {errors?.message?.type === "maxLength" && (
+            {errors?.additionalComments?.type === "maxLength" && (
               <label className="error">
-                Message cannot exceed 300 characters
+                Additional Comments cannot exceed 300 characters
               </label>
             )}
           </p>
