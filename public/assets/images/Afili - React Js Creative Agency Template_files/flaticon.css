@@ -1,0 +1,86 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.ttf?f1877b823eff63496fc9e2dd6beb9a09") format("truetype"),
+	url("../fonts/flaticon.woff?f1877b823eff63496fc9e2dd6beb9a09") format("woff"),
+	url("../fonts/flaticon.woff2?f1877b823eff63496fc9e2dd6beb9a09") format("woff2"),
+	url("../fonts/flaticon.eot?f1877b823eff63496fc9e2dd6beb9a09#iefix") format("embedded-opentype"),
+	url("../fonts/flaticon.svg?f1877b823eff63496fc9e2dd6beb9a09#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-broom:before {
+    content: "\f101";
+}
+.flaticon-cleaning-brush:before {
+    content: "\f102";
+}
+.flaticon-cleaning:before {
+    content: "\f103";
+}
+.flaticon-coffee-cup:before {
+    content: "\f104";
+}
+.flaticon-customer:before {
+    content: "\f105";
+}
+.flaticon-customers:before {
+    content: "\f106";
+}
+.flaticon-doorway:before {
+    content: "\f107";
+}
+.flaticon-envelope:before {
+    content: "\f108";
+}
+.flaticon-house:before {
+    content: "\f109";
+}
+.flaticon-laundry:before {
+    content: "\f10a";
+}
+.flaticon-layers:before {
+    content: "\f10b";
+}
+.flaticon-location:before {
+    content: "\f10c";
+}
+.flaticon-mountains:before {
+    content: "\f10d";
+}
+.flaticon-phone-call:before {
+    content: "\f10e";
+}
+.flaticon-post-office:before {
+    content: "\f10f";
+}
+.flaticon-quotes-left:before {
+    content: "\f110";
+}
+.flaticon-quotes-right:before {
+    content: "\f111";
+}
+.flaticon-satisfied:before {
+    content: "\f112";
+}
+.flaticon-skillful:before {
+    content: "\f113";
+}
+.flaticon-store:before {
+    content: "\f114";
+}
+.flaticon-support:before {
+    content: "\f115";
+}
+.flaticon-thumbs-like:before {
+    content: "\f116";
+}

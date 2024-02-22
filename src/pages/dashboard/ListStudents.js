@@ -114,6 +114,8 @@ export default function ListStudents() {
                             >
                               Update
                             </Link>
+                            cd ~
+
                           </td>
                           <td>
                             <Link
@@ -124,7 +126,7 @@ export default function ListStudents() {
                             </Link>
                           </td>
                         
-                          <td>{dataObj.docs.map(d => (<li key ={index}><Link to ={{pathname: d}} target='_blank'>{d}</Link></li>))}</td>
+                          <td>{dataObj.docs.map(d => (<li key ={index}><Link to ={{pathname: d}} target='_blank'>{d.substring(d.indexOf(".com/") + 5)}</Link></li>))}</td>
                        
                         </tr>
                       );
@@ -135,6 +137,7 @@ export default function ListStudents() {
             </div>
           </div>
         </section>
+      
       </div>
     </Styles>
   );

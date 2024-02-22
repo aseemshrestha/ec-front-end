@@ -1,0 +1,149 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?cwz3hy");
+  src: url("../fonts/icomoon.eot?cwz3hy#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?cwz3hy") format("truetype"),
+    url("../fonts/icomoon.woff?cwz3hy") format("woff"),
+    url("../fonts/icomoon.svg?cwz3hy#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icofont-"],
+[class*=" icofont-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icofont-category:before {
+  content: "\e900";
+}
+
+.icofont-cloud:before {
+  content: "\e901";
+}
+
+.icofont-coffee:before {
+  content: "\e902";
+}
+
+.icofont-compliance:before {
+  content: "\e903";
+}
+
+.icofont-creative:before {
+  content: "\e904";
+}
+
+.icofont-customer:before {
+  content: "\e905";
+}
+
+.icofont-customer-care:before {
+  content: "\e906";
+}
+
+.icofont-customers:before {
+  content: "\e907";
+}
+
+.icofont-cyber:before {
+  content: "\e908";
+}
+
+.icofont-doorway:before {
+  content: "\e909";
+}
+
+.icofont-earth:before {
+  content: "\e90a";
+}
+
+.icofont-envelope:before {
+  content: "\e90b";
+}
+
+.icofont-house:before {
+  content: "\e90c";
+}
+
+.icofont-improve:before {
+  content: "\e90d";
+}
+
+.icofont-info:before {
+  content: "\e90e";
+}
+
+.icofont-layer:before {
+  content: "\e90f";
+}
+
+.icofont-link:before {
+  content: "\e910";
+}
+
+.icofont-location:before {
+  content: "\e911";
+}
+
+.icofont-manage:before {
+  content: "\e912";
+}
+
+.icofont-network:before {
+  content: "\e913";
+}
+
+.icofont-phone-call:before {
+  content: "\e914";
+}
+
+.icofont-post-office:before {
+  content: "\e915";
+}
+
+.icofont-quote-left:before {
+  content: "\e916";
+}
+
+.icofont-quote-right:before {
+  content: "\e917";
+}
+
+.icofont-satisfy:before {
+  content: "\e918";
+}
+
+.icofont-skillful:before {
+  content: "\e919";
+}
+
+.icofont-storage:before {
+  content: "\e91a";
+}
+
+.icofont-store:before {
+  content: "\e91b";
+}
+
+.icofont-support:before {
+  content: "\e91c";
+}
+
+.icofont-thumb:before {
+  content: "\e91d";
+}
+
+.icofont-voip:before {
+  content: "\e91e";
+}
